@@ -11,9 +11,9 @@ The purpose of this project is to create a website with educational impact, allo
 
 In the project directory, you can run:
 
-### `npm start`
+`npm start`
 
-### `npm test`
+`npm test`
 
-### `npm run build`
+`npm run build`
 
