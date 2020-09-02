@@ -1,20 +1,33 @@
+.container{
+align-content: center;
+position: relative;
+width: 100%;
+}
 .table-grid{
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  // grid-template-rows: repeat(7, 25%);
-  // grid-template-columns: 240px auto auto 240px;
+  grid-template-rows: repeat(7, 25%);  
   .__column{
     float:left;
     margin-top: auto;
-  }
-  .__long_rows{
     
   }
 }
+.section_one{
+color:white;
+}
+.section_two{
+  color:white;
+}
+.section_three{
+  padding: 50px;
+
+}
 .section_four{
-  float:right;
+  padding: 50px;
+
 }
 .section_five{
-  
+  padding-top:50px;
 }
