@@ -9,6 +9,20 @@ class Table extends Component {
     }
     return <div>{elements}</div>
   };
+  generateColumn = (y, x) => {
+    let columns = [];
+    for (var i = 0; i < y; i++) {
+      columns.push(
+        <section className="__column">
+          {this.generateElements(x)}
+        </section>
+      )
+    }
+    return <div className="table-grid">{columns}</div>
+  }
+  generateRows = (y,x) =>{
+    let rows = []
+  }
   generateSectionOne = () => {
     return <div className="table-grid">
       <section className="__column">
@@ -22,42 +36,18 @@ class Table extends Component {
       </section>
     </div>
   }
-  generateSectionTwo = () => {
-    return <div className="table-grid">
-      <section className="__column">
-        {this.generateElements(4)}
-      </section>
-      <section className="__column">
-        {this.generateElements(4)}
-      </section>
-      <section className="__column">
-        {this.generateElements(4)}
-      </section>
-      <section className="__column">
-        {this.generateElements(4)}
-      </section>
-      <section className="__column">
-        {this.generateElements(4)}
-      </section>
-      <section className="__column">
-        {this.generateElements(4)}
-      </section>
-      <section className="__column">
-        {this.generateElements(4)}
-      </section>
-      <section className="__column">
-        {this.generateElements(4)}
-      </section>
-      <section className="__column">
-        {this.generateElements(4)}
-      </section>
-    </div>
-  }
   render() {
     return (
       <Fragment>
         {this.generateSectionOne()}
-        {this.generateSectionTwo()}
+        {this.generateColumn(9, 4)}
+        {this.generateColumn(5, 6)}
+        <div className="section_four">
+          {this.generateColumn(1, 7)}
+        </div>
+        <div className="section_five">
+          {this.generateColumn(14, 2)}
+        </div>
       </Fragment>
 
 
