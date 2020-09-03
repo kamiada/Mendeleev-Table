@@ -7,7 +7,7 @@ class Table extends Component {
     for (var i = 0; i < x; i++) {
       elements.push(<Element key={i} />)
     }
-    return <div>{elements}</div>
+    return <Fragment>{elements}</Fragment>
   };
   generateColumn = (y, x) => {
     let columns = [];
@@ -35,8 +35,7 @@ class Table extends Component {
   }
   render() {
     return (
-      <div className="container">
-
+      <Fragment>
         <div className="section_one">
           {this.generateSectionOne()}
         </div>
@@ -52,11 +51,7 @@ class Table extends Component {
         <div className="section_five">
           {this.generateColumn(14, 2)}
         </div>
-
-      </div>
-
-
-
+        </Fragment>
     );
   }
 }
