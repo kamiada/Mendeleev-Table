@@ -1,12 +1,14 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './base.css';
 import './element.scss';
-class Element extends Component{
+class Element extends Component {
 
 
-  render(){
-    return(
-        <div className="card">fake title</div>
+  render() {
+    return (
+        <div className="element">
+          fake title
+        </div>
     );
   }
 }

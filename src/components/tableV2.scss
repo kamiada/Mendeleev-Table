@@ -1,0 +1,29 @@
+.container{
+  margin: 100px;
+}
+.title{
+  color:white;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 40px;
+}
+.one-div-to-hold-them-all{
+  display: grid;
+  padding-left: 0;
+  position: relative;
+  height: 200px;
+  margin-right: -1px;
+  text-shadow: none;
+  gap: 1rem;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+.square{
+  display: flex;
+  padding: 4px;
+	position: relative;
+	z-index: 1;
+	cursor: default;
+  transition: all 0.3s ease;
+  background-color: #010440;
+}
