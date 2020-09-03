@@ -1,3 +1,10 @@
+.colours{
+  --bg-element-colour_1: #6F23D9;
+  --bg-element-colour_2: #6727F2;
+  --footer: #2E294E;
+  --background: #010440;
+
+}
 .container{
   margin: 100px;
 }
@@ -25,5 +32,14 @@
 	z-index: 1;
 	cursor: default;
   transition: all 0.3s ease;
-  background-color: #010440;
+  background-color: var(--background);
+}
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:var(--footer);
+  color: white;
+  text-align: center;
 }
