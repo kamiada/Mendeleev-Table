@@ -9,9 +9,10 @@ class TableV2 extends Component {
 
         <div className="container">
           <h1 className="title">Periodic Table</h1>
+          {/* optimise this bs below with some loop */}
           <div className="one-div-to-hold-them-all">
             {/* row1 */}
-            <div className="square"><Element />
+            <div className="square"><Element atomicNumb='1' symbol='H' name='Hydrogen' atomicWeight='1.0078'/>
             </div>
             <div className="square"></div>
             <div className="square"></div>
