@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 .colours{
   --bg-element-colour_1: #6F23D9;
   --bg-element-colour_2: #6727F2;
@@ -10,9 +11,12 @@
 }
 .title{
   color:white;
+  font-family: 'Play', sans-serif;
   text-align: center;
   text-transform: capitalize;
   font-size: 40px;
+  text-shadow: 0 0 20px blue;
+
 }
 .one-div-to-hold-them-all{
   display: grid;
