@@ -30,8 +30,8 @@
 }
 .square{
   display: flex;
+  position: relative;
   padding: 4px;
-	position: relative;
 	z-index: 1;
 	cursor: default;
   transition: all 0.3s ease;
