@@ -485,16 +485,12 @@ class TableV2 extends Component {
               <div className="square"><Element 
                 atomicNumb={data[116].atomic_number} symbol={data[116].symbol} name={data[116].name} atomicWeight={data[116].atomic_weight}
               /></div>
-              <div className="square"><Element 
+              <div className="actinides"><Element 
                 atomicNumb={data[117].atomic_number} symbol={data[117].symbol} name={data[117].name} atomicWeight={data[117].atomic_weight}
               /></div>
               <div className="square"></div>
 
             </div>
-          </div>
-
-          <div className="footer">
-            <p>footer</p>
           </div>
 
         </Fragment>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './base.css';
+import './base.scss';
 import './element.scss';
 class Element extends Component {
   handleClick(){
