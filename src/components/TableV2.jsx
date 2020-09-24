@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import Element from "./Element";
 import "./tableV2.scss";
 import data from "../elementsData.json";
+import ReactDOM from 'react-dom';
 
 class TableV2 extends Component {
   generateEmptySquares = (x) => {
@@ -13,7 +14,7 @@ class TableV2 extends Component {
   };
   fillTable = (data) => {
     const firstElement = (
-      <div key={data[0]} className="square">
+      <div id={data[0]._id} className="square" onClick={this.resizeOnClick()}>
         <Element
           onClick={this.handleClick}
           atomicNumb={data[0].atomic_number}
@@ -31,9 +32,8 @@ class TableV2 extends Component {
     for (var i = 1; i < data.length; i++) {
       if (i < 4) {
         from1to3.push(
-          <div key={i} className="square">
+          <div key={i} className="square" onClick={this.resizeOnClick()}>
             <Element
-              onClick={this.handleClick}
               atomicNumb={data[i].atomic_number}
               symbol={data[i].symbol}
               name={data[i].name}
@@ -121,6 +121,7 @@ class TableV2 extends Component {
     );
   };
   resizeOnClick() {
+    var elem = document.getElementById('1');
     console.log("The link was clicked.");
   }
   render() {
