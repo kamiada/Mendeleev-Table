@@ -1,41 +1,48 @@
-.table-grid{
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  grid-template-rows: repeat(7, 25%);  
-  .__column{
-    margin-top: auto;  
-  }
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+.colours{
+  --bg-element-colour_1: #6F23D9;
+  --bg-element-colour_2: #6727F2;
+  --footer: #2E294E;
+  --background: #010440;
 
 }
-.section_one{
-color:white;
+.container{
+  margin: 100px;
 }
-.section_two{
+.title{
   color:white;
-}
-.section_three{
-  padding: 50px;
+  font-family: 'Play', sans-serif;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 40px;
+  text-shadow: 0 0 20px blue;
 
 }
-.section_four{
-  padding: 50px;
-
+.one-div-to-hold-them-all{
+  display: grid;
+  padding-left: 0;
+  position: relative;
+  height: 200px;
+  margin-right: -1px;
+  text-shadow: none;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(10, 1fr);
 }
-.section_five{
-  padding-top:50px;
+.square{
+  display: flex;
+  position: relative;
+  padding: 4px;
+	z-index: 1;
+	cursor: default;
+  transition: all 0.3s ease;
+  background-color: var(--background);
 }
-
-//   grid-template-areas:
-//  'a	.	.	.	.	.	.	.	.	.	.	.	.	.	.	.	c
-//  a	a	.	.	.	.	.	.	.	.	.	.	c	c	c	c	c
-//  a	a	.	.	.	.	.	.	.	.	.	.	c	c	c	c	c
-//  a	a	a	b	b	b	b	b	b	b	b	b	c	c	c	c	c
-//  a	a	a	b	b	b	b	b	b	b	b	b	c	c	c	c	c
-//  a	a	a	b	b	b	b	b	b	b	b	b	c	c	c	c	c
-//  a	a	a	b	b	b	b	b	b	b	b	b	c	c	c	c	c
-//  .	.	.	.	.	.	.	.	.	.	.	.	.	.	.	.	.
-//  .	.	.	.	.	.	.	.	.	.	.	.	.	.	.	.	.
-//  .	.	.	d	d	d	d	d	d	d	d	d	d	d	d	d	.
-//  .	.	.	d	d	d	d	d	d	d	d	d	d	d	d	d	.';
-// }
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:var(--footer);
+  color: white;
+  text-align: center;
+}
