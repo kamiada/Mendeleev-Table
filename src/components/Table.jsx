@@ -10,25 +10,41 @@ class TableV2 extends Component {
   }
   constructor(props){
     super(props);
-    this.printOneAtomicNumb = this.printOneAtomicNumb.bind(this);
-    this.printArrayOfAtomicNumbs = this.printArrayOfAtomicNumbs.bind(this);
+    this.getAtomicNumberTest = this.getAtomicNumberTest.bind(this);
+    this.getAtomicNumber = this.getAtomicNumber.bind(this);
     this.checkIsClicked = this.checkIsClicked.bind(this);
+    this.renderClicked = this.renderClicked.bind(this);
   }
-  printOneAtomicNumb(numb){
-    console.log('Hello', numb);
+  getAtomicNumberTest(numb){
+    return numb;
   }
-  printArrayOfAtomicNumbs(array){
+  getAtomicNumber(array){
     console.log(array);
     var element = "";
     for(element in array){
      console.log(array[element].key);
+     return array[element].key;
     }
   }
   checkIsClicked = () => {
+  if(this.state.isClicked === false){
+  this.setState({
+    isClicked: true,
+  })}
+  else{
     this.setState({
-      isClicked: true,
-    })
+      isClicked: false,
+    })}
   }
+  renderClicked= (atomic_numb, dataArray) =>{
+    const chosenElement = dataArray.filter(data => data.atomic_number === atomic_numb);
+    return <div className="pickedElement">
+      {console.log('here', chosenElement[0].name)}
+      {chosenElement}
+    </div>
+    
+  }
+  
   generateEmptySquares = (x) => {
     let squares = [];
     for (var i = 0; i < x; i++) {
@@ -42,7 +58,10 @@ class TableV2 extends Component {
     const { isClicked } = this.state;
 
     const firstElement = (
-      <div id={data[0].atomic_number} key={data[0].atomic_number} className={isClicked ? "focusElement" : "square"} onClick={() => this.checkIsClicked()} >
+      <div id={data[0].atomic_number} key={data[0].atomic_number} className={isClicked ? "disappear" : "square"} onClick={() => 
+      {this.checkIsClicked();
+      this.renderClicked(this.getAtomicNumberTest(data[0].atomic_number), data);}
+      } >
         <Element
           atomicNumb={data[0].atomic_number}
           symbol={data[0].symbol}
@@ -59,7 +78,7 @@ class TableV2 extends Component {
     for (var i = 1; i < data.length; i++) {
       if (i < 4) {
         from1to3.push(
-          <div id={data[i].atomic_number} key={data[i].atomic_number} className="square" onClick={()=> this.printArrayOfAtomicNumbs(from1to3)}>
+          <div id={data[i].atomic_number} key={data[i].atomic_number} className="square" onClick={()=> this.getAtomicNumber(from1to3)}>
             <Element
               atomicNumb={data[i].atomic_number}
               symbol={data[i].symbol}
@@ -128,7 +147,7 @@ class TableV2 extends Component {
     }
 
     return (
-      <div className={isClicked ? "blurredOutTable" :  "one-div-to-hold-them-all"}>
+      <div className={isClicked ? "blurredOutTable" :  "one-div-to-hold-them-all"} onClick={isClicked===true ? () => this.checkIsClicked() : ''}>
         {firstElement}
         {this.generateEmptySquares(16)}
         {from1to3}
@@ -146,7 +165,7 @@ class TableV2 extends Component {
   };
   render() {
     return (
-      <div className="container">
+      <div className="container" >
         <h1 className="title">Periodic Table</h1>
         <Fragment>{this.fillTable(data)}</Fragment>
       </div>

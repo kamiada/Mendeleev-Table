@@ -29,7 +29,16 @@
   grid-template-rows: repeat(10, 1fr);
 }
 .blurredOutTable{
-
+  display: grid;
+  padding-left: 0;
+  position: relative;
+  height: 200px;
+  margin-right: -1px;
+  text-shadow: none;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
 }
 .square{
   display: flex;
@@ -40,8 +49,11 @@
   transition: all 0.3s ease;
   background-color: var(--background);
 }
-.focusElement{
-  
+.disappear{
+  display: none;
+}
+.pickedElement{
+  position: absolute;
 }
 .footer{
   position: fixed;
