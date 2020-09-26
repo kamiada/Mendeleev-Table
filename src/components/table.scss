@@ -28,6 +28,9 @@
   grid-template-columns: repeat(18, 1fr);
   grid-template-rows: repeat(10, 1fr);
 }
+.blurredOutTable{
+
+}
 .square{
   display: flex;
   position: relative;
@@ -36,6 +39,9 @@
 	cursor: default;
   transition: all 0.3s ease;
   background-color: var(--background);
+}
+.focusElement{
+  
 }
 .footer{
   position: fixed;

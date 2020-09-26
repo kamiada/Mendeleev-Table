@@ -5,10 +5,14 @@ import "./table.scss";
 import data from "../elementsData.json";
 
 class TableV2 extends Component {
+  state = {
+    isClicked: false,
+  }
   constructor(props){
     super(props);
     this.printOneAtomicNumb = this.printOneAtomicNumb.bind(this);
     this.printArrayOfAtomicNumbs = this.printArrayOfAtomicNumbs.bind(this);
+    this.checkIsClicked = this.checkIsClicked.bind(this);
   }
   printOneAtomicNumb(numb){
     console.log('Hello', numb);
@@ -20,7 +24,11 @@ class TableV2 extends Component {
      console.log(array[element].key);
     }
   }
-
+  checkIsClicked = () => {
+    this.setState({
+      isClicked: true,
+    })
+  }
   generateEmptySquares = (x) => {
     let squares = [];
     for (var i = 0; i < x; i++) {
@@ -28,9 +36,13 @@ class TableV2 extends Component {
     }
     return <Fragment>{squares}</Fragment>;
   };
+
+
   fillTable = (data) => {
+    const { isClicked } = this.state;
+
     const firstElement = (
-      <div id={data[0].atomic_number} key={data[0].atomic_number} className="square" onClick={() => this.printOneAtomicNumb(data[0].atomic_number)}>
+      <div id={data[0].atomic_number} key={data[0].atomic_number} className={isClicked ? "focusElement" : "square"} onClick={() => this.checkIsClicked()} >
         <Element
           atomicNumb={data[0].atomic_number}
           symbol={data[0].symbol}
@@ -116,7 +128,7 @@ class TableV2 extends Component {
     }
 
     return (
-      <Fragment>
+      <div className={isClicked ? "blurredOutTable" :  "one-div-to-hold-them-all"}>
         {firstElement}
         {this.generateEmptySquares(16)}
         {from1to3}
@@ -129,14 +141,14 @@ class TableV2 extends Component {
         {from90to103}
         {this.generateEmptySquares(4)}
         {from104to117}
-      </Fragment>
+      </div>
     );
   };
   render() {
     return (
       <div className="container">
         <h1 className="title">Periodic Table</h1>
-        <div className="one-div-to-hold-them-all">{this.fillTable(data)}</div>
+        <Fragment>{this.fillTable(data)}</Fragment>
       </div>
     );
   }
