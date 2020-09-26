@@ -14,8 +14,10 @@ class TableV2 extends Component {
   printOneAtomicNumb(numb){
     console.log('Hello', numb);
   }
-  printArrayOfAtomicNumbs([{atomic_number}]){
-    console.log('yolo')
+  printArrayOfAtomicNumbs(array){
+    console.log(array);
+    for(let n = 0; n< array.length; n++){
+    console.log('yolo', n)}
   }
 
   generateEmptySquares = (x) => {
@@ -44,7 +46,7 @@ class TableV2 extends Component {
     for (var i = 1; i < data.length; i++) {
       if (i < 4) {
         from1to3.push(
-          <div id={data[i].atomic_number} key={data[i].atomic_number} className="square">
+          <div id={data[i].atomic_number} key={data[i].atomic_number} className="square" onClick={()=> this.printArrayOfAtomicNumbs(from1to3)}>
             <Element
               atomicNumb={data[i].atomic_number}
               symbol={data[i].symbol}
