@@ -5,7 +5,7 @@ import "./table.scss";
 import data from "../elementsData.json";
 import ExpandedSegment from './ExpandedSegment';
 
-class TableV2 extends Component {
+class Table extends Component {
   state = {
     isClicked: false,
     element: '',
@@ -14,6 +14,12 @@ class TableV2 extends Component {
     super(props);
     this.checkIsClicked = this.checkIsClicked.bind(this);
     this.renderClicked = this.renderClicked.bind(this);
+    this.printId = this.printId.bind(this);
+  }
+  printId = (id) => {
+    for(var x in id){
+      console.log()
+    }
   }
   checkIsClicked = () => {
     if (this.state.isClicked === false) {
@@ -37,7 +43,6 @@ class TableV2 extends Component {
         date={chosenElement[0].discovered_in}
       />
     </Fragment>
-
   }
 
   generateEmptySquares = (x) => {
@@ -174,4 +179,4 @@ class TableV2 extends Component {
   }
 }
 
-export default TableV2;
+export default Table;
