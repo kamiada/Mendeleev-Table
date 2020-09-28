@@ -3,6 +3,7 @@ import React, { Component, Fragment } from "react";
 import Element from "./Element";
 import "./table.scss";
 import data from "../elementsData.json";
+import ExpandedSegment from './ExpandedSegment';
 
 class TableV2 extends Component {
   state = {
