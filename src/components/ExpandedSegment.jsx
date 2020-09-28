@@ -1,12 +1,31 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
+import './expandedSegment.scss';
+class ExpandedSegment extends Component {
 
-class ExpandedSegment extends Component{
- 
-  render(){
-    return(
-      <Fragment>
-
-      </Fragment>
+  render() {
+    return (
+      <div className="segmentContainer">
+        <div className="periodicElement">
+          <div>
+            {this.props.atomic_n}
+          </div>
+          <div>
+            {this.props.atomic_s}
+          </div>
+          <div>
+            {this.props.atomic_name}
+          </div>
+          <div>
+            {this.props.atomic_w}
+          </div>
+        </div>
+        <div className="descriptionContainer">
+        {this.props.description}
+        </div>
+        <div className="finderDetails">
+          {this.props.date}
+        </div>
+      </div>
     )
   }
 }

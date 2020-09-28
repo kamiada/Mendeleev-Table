@@ -8,44 +8,38 @@ import ExpandedSegment from './ExpandedSegment';
 class TableV2 extends Component {
   state = {
     isClicked: false,
+    element: '',
   }
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.getAtomicNumberTest = this.getAtomicNumberTest.bind(this);
-    this.getAtomicNumber = this.getAtomicNumber.bind(this);
     this.checkIsClicked = this.checkIsClicked.bind(this);
     this.renderClicked = this.renderClicked.bind(this);
   }
-  getAtomicNumberTest(numb){
-    return numb;
-  }
-  getAtomicNumber(array){
-    console.log(array);
-    var element = "";
-    for(element in array){
-     console.log(array[element].key);
-     return array[element].key;
+  checkIsClicked = () => {
+    if (this.state.isClicked === false) {
+      this.setState({
+        isClicked: true,
+      })
+    }
+    else {
+      this.setState({
+        isClicked: false,
+      })
     }
   }
-  checkIsClicked = () => {
-  if(this.state.isClicked === false){
-  this.setState({
-    isClicked: true,
-  })}
-  else{
-    this.setState({
-      isClicked: false,
-    })}
-  }
-  renderClicked= (atomic_numb, dataArray) =>{
+  renderClicked = (atomic_numb, dataArray) => {
+    console.log(dataArray, 'array in renderClicked');
     const chosenElement = dataArray.filter(data => data.atomic_number === atomic_numb);
-    return <div className="pickedElement">
-      {console.log('here', chosenElement[0].name)}
-      {chosenElement}
-    </div>
-    
+    return <Fragment>
+      <ExpandedSegment atomic_n={chosenElement[0].atomic_number} atomic_s={chosenElement[0].symbol}
+        atomic_name={chosenElement[0].name} atomic_w={chosenElement[0].atomic_weight}
+        description={chosenElement[0].description}
+        date={chosenElement[0].discovered_in}
+      />
+    </Fragment>
+
   }
-  
+
   generateEmptySquares = (x) => {
     let squares = [];
     for (var i = 0; i < x; i++) {
@@ -59,9 +53,7 @@ class TableV2 extends Component {
     const { isClicked } = this.state;
 
     const firstElement = (
-      <div id={data[0].atomic_number} key={data[0].atomic_number} className={isClicked ? "disappear" : "square"} onClick={() => 
-      {this.checkIsClicked();
-      this.renderClicked(this.getAtomicNumberTest(data[0].atomic_number), data);}
+      <div id={data[0].atomic_number} key={data[0].atomic_number} className={isClicked ? "disappear" : "square"} onClick={() => { this.checkIsClicked(); }
       } >
         <Element
           atomicNumb={data[0].atomic_number}
@@ -79,7 +71,13 @@ class TableV2 extends Component {
     for (var i = 1; i < data.length; i++) {
       if (i < 4) {
         from1to3.push(
-          <div id={data[i].atomic_number} key={data[i].atomic_number} className="square" onClick={()=> this.getAtomicNumber(from1to3)}>
+          <div id={data[i].atomic_number} key={data[i].atomic_number} className={isClicked ? "disappear" : "square"} onClick={() => {
+            this.checkIsClicked();
+            this.setState({
+              element: '3',
+            });
+          }
+          }  >
             <Element
               atomicNumb={data[i].atomic_number}
               symbol={data[i].symbol}
@@ -148,19 +146,21 @@ class TableV2 extends Component {
     }
 
     return (
-      <div className={isClicked ? "blurredOutTable" :  "one-div-to-hold-them-all"} onClick={isClicked===true ? () => this.checkIsClicked() : ''}>
-        {firstElement}
-        {this.generateEmptySquares(16)}
-        {from1to3}
-        {console.log(from1to3)}
-        {this.generateEmptySquares(10)}
-        {from4to11}
-        {this.generateEmptySquares(10)}
-        {from12to89}
-        {this.generateEmptySquares(39)}
-        {from90to103}
-        {this.generateEmptySquares(4)}
-        {from104to117}
+      <div>
+        {isClicked ? this.renderClicked(this.state.element, data) : ''}
+        <div className={isClicked ? "blurredOutTable" : "one-div-to-hold-them-all"} onClick={isClicked === true ? () => this.checkIsClicked() : ''}>
+          {firstElement}
+          {this.generateEmptySquares(16)}
+          {from1to3}
+          {this.generateEmptySquares(10)}
+          {from4to11}
+          {this.generateEmptySquares(10)}
+          {from12to89}
+          {this.generateEmptySquares(39)}
+          {from90to103}
+          {this.generateEmptySquares(4)}
+          {from104to117}
+        </div>
       </div>
     );
   };
