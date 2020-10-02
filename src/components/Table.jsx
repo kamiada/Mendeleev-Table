@@ -173,7 +173,13 @@ class Table extends Component {
     return (
       <div className="container" >
         <h1 className="title">Periodic Table</h1>
-        <Fragment>{this.fillTable(data)}</Fragment>
+        {/* <Fragment>{this.fillTable(data)}</Fragment> */}
+        <Fragment>
+        <ExpandedSegment atomic_n={data[0].atomic_number} atomic_s={data[0].symbol}
+        atomic_name={data[0].name} atomic_w={data[0].atomic_weight}
+        description={data[0].description}
+        date={data[0].discovered_in}
+      />        </Fragment>
       </div>
     );
   }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
 .segmentContainer{
   display: flex;
   justify-content: center;
@@ -9,25 +11,57 @@
   left: 50%;
 }
 .periodicElement{
-  background-color: paleturquoise;
+  font-family: 'Play', sans-serif;
+  font-size: 30px;
+  color: white;
+  background-color:  #6F23D9;
   height: 150px;
   width: 150px;
   text-align: center;
-  padding: 20px;
-  margin-top:50px;
+  border-radius: 5%;
 }
 .descriptionContainer{
-  background-color: violet;
+  font-family: 'Play', sans-serif;
+  background-color:  #6F23D9;
+  color: white;
   height: 350px;
   width: 350px;
   text-align: center;
   padding: 20px;
+  border-radius: 5%;
 }
 .finderDetails{
+  font-family: 'Play', sans-serif;
   background-color: palegreen;
+  color: white;
   height: 150px;
   width: 150px;
   text-align: center;
   padding: 20px;
   margin-top:15px;
+  border-radius: 5%;
+}
+.animatedBorder{
+  border-radius: 5%;
+  animation: shine 7s linear infinite;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+  margin-top:50px;
+  z-index: -1;
+}
+@keyframes shine{
+    //shadow box: offsetX offsetY blurSize spread of the light size and colour
+  50%{
+    box-shadow: 
+    inset 0 0 50px #fff,      /* inner white */
+    inset 20px 0 80px #f0f,   /* inner left magenta short */
+    inset -20px 0 80px #0ff,  /* inner right cyan short */
+    inset 20px 0 300px #f0f,  /* inner left magenta broad */
+    inset -20px 0 300px #0ff, /* inner right cyan broad */
+    0 0 50px #fff,            /* outer white */
+    -10px 0 80px #f0f,        /* outer left magenta */
+    10px 0 80px #0ff; 
+  }
 }
