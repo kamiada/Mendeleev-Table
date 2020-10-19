@@ -13,7 +13,7 @@
 .periodicElement{
   font-family: 'Play', sans-serif;
   font-size: 30px;
-  color: white;
+  color:white;
   background-color:  #6F23D9;
   height: 150px;
   width: 150px;
@@ -24,16 +24,16 @@
   font-family: 'Play', sans-serif;
   font-size: 14px;
   background-color:  #6F23D9;
-  color: white;
+  color: #f7e8f6;
   height: 350px;
   width: 350px;
-  text-align: center;
+  text-align: justify;
   padding: 20px;
   border-radius: 5%;
 }
 .finderDetails{
   font-family: 'Play', sans-serif;
-  background-color: palegreen;
+  background-color: #6F23D9;
   color: white;
   height: 150px;
   width: 150px;
@@ -41,6 +41,13 @@
   padding: 20px;
   margin-top:15px;
   border-radius: 5%;
+}
+.basicBorder{
+  border-radius: 5%;
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+  z-index: -1;
 }
 .animatedBorder{
   border-radius: 5%;
@@ -63,6 +70,6 @@
     inset -20px 0 300px #0ff, /* inner right cyan broad */
     0 0 50px #fff,            /* outer white */
     -10px 0 80px #f0f,        /* outer left magenta */
-    10px 0 80px #0ff; 
+    10px 0 80px #010440; 
   }
 }

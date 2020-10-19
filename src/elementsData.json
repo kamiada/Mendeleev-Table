@@ -5,10 +5,10 @@
     "symbol": "H",
     "name": "Hydrogen",
     "atomic_weight": "1.0078",
-    "description": "something",
-    "examples": "something",
-    "discovered_in": "1029",
-    "discovered_by": "Helena"
+    "description": "This colourless and odourless gas it's lightest element in the periodic table. It reacts vigorously with oxygen, which caused the end of use of it in filling airships - famous Hindenberg catastrophy was caused by it. Hydrogen can be find in the water and almost all the molecules of living things. Most of the stars (including sun) and the planet Jupiter are made out of hydrogen. Hydrogen can be produced by electrolysis of water and by heating natural gas with steam from syngas. The syngas is then separated to give hydrogen.",
+    "examples": "It can fuel cells to generate electricity, power or heat; it's used in fertiliser production, ",
+    "discovered_in": "1766",
+    "discovered_by": "Henry Cavendish"
   },
   {
     "_id": "2",
