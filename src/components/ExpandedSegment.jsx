@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import './expandedSegment.scss';
 class ExpandedSegment extends Component {
 
@@ -24,8 +24,10 @@ class ExpandedSegment extends Component {
         <div className="descriptionContainer">
           {this.props.description}
         </div>
-        <div className="finderDetails">
-          {this.props.date}
+        <div className="basicBorder">
+          <div className="finderDetails">
+            {this.props.date}
+          </div>
         </div>
       </div>
     )
