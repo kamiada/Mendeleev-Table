@@ -1,3 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+.element{
+  text-align: center;
+  text-shadow: 0 0 20px yellow;
+  font-family: 'Play', sans-serif;
+  cursor: default;
+  color:#fff;
+  background: #6C3AD8;
+  margin: auto;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+.element:hover{
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0175em 0.5em;
+  transform: translateY(-3px) scale(2.1);
+}
+.resize{
+  scale: 1.5;
+}
+
 .element{
   animation: cardEntrance 700ms ease-out;
   animation-fill-mode: backwards;

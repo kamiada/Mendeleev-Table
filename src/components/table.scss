@@ -6,8 +6,7 @@
   --background: #010440;
 
 }
-
-.title{
+.title {
   color:white;
   font-family: 'Play', sans-serif;
   text-align: center;
@@ -16,16 +15,16 @@
   text-shadow: 0 0 20px blue;
 
 }
-.one-div-to-hold-them-all{
+.one-div-to-hold-them-all {
   display: grid;
   padding-left: 0;
   position: relative;
   height: 200px;
   text-shadow: none;
-  grid-template-columns: repeat(18, 1fr);
+  grid-template-columns: repeat(18, 0fr);
   grid-template-rows: repeat(10, 1fr);
 }
-.blurredOutTable{
+.blurredOutTable {
   display: grid;
   padding-left: 0;
   position: relative;
@@ -37,19 +36,10 @@
   filter: blur(20px);
   -webkit-filter: blur(20px);
 }
-.square{
-  display: flex;
-  position: relative;
-	cursor: default;
-  transition: all 0.3s ease;
-  background-color: var(--background);
-  margin: 0%;
-  
-}
-.disappear{
+.disappear {
   display: none;
 }
-.footer{
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;
