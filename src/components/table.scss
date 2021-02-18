@@ -6,6 +6,7 @@
   --background: #010440;
 
 }
+
 .title{
   color:white;
   font-family: 'Play', sans-serif;
@@ -39,10 +40,11 @@
 .square{
   display: flex;
   position: relative;
-	z-index: 1;
 	cursor: default;
   transition: all 0.3s ease;
   background-color: var(--background);
+  margin: 0%;
+  
 }
 .disappear{
   display: none;

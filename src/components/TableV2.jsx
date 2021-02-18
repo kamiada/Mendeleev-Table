@@ -1,9 +1,9 @@
 /* eslint-disable no-redeclare */
 import React, { Component, Fragment } from "react";
-import Element from "../src/components/Element";
+import Element from "./Element";
 import "./table.scss";
-import data from "../src/elementsData.json";
-import ExpandedSegment from '../src/components/ExpandedSegment';
+import data from "../elementsData.json";
+import ExpandedSegment from "./ExpandedSegment";
 
 class TableV2 extends Component {
   state = {
