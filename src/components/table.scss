@@ -6,9 +6,6 @@
   --background: #010440;
 
 }
-.container{
-  margin: 100px;
-}
 .title{
   color:white;
   font-family: 'Play', sans-serif;
@@ -42,7 +39,6 @@
 .square{
   display: flex;
   position: relative;
-  padding: 4px;
 	z-index: 1;
 	cursor: default;
   transition: all 0.3s ease;
