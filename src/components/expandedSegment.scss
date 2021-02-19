@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
-.segmentContainer{
+.segmentContainer {
   display: flex;
   justify-content: center;
   z-index: 9;
@@ -10,7 +10,7 @@
   bottom: 50%;
   left: 50%;
 }
-.periodicElement{
+.periodicElement {
   font-family: 'Play', sans-serif;
   font-size: 30px;
   color:white;
@@ -20,7 +20,7 @@
   text-align: center;
   border-radius: 5%;
 }
-.descriptionContainer{
+.descriptionContainer {
   font-family: 'Play', sans-serif;
   font-size: 14px;
   background-color:  #6F23D9;
@@ -31,7 +31,7 @@
   padding: 20px;
   border-radius: 5%;
 }
-.finderDetails{
+.finderDetails {
   font-family: 'Play', sans-serif;
   background-color: #6F23D9;
   color: white;
@@ -42,14 +42,28 @@
   margin-top:15px;
   border-radius: 5%;
 }
-.basicBorder{
+.parentContainer {
+  height: 400px;
+}
+.examples {
+  font-family: 'Play', sans-serif;
+  background-color: #6F23D9;
+  color: white;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5%;
+}
+.basicBorder {
   border-radius: 5%;
   height: 150px;
   width: 150px;
   padding: 10px;
   z-index: -1;
+  margin-bottom: 10px;
 }
-.animatedBorder{
+.animatedBorder {
   border-radius: 5%;
   animation: shine 7s linear infinite;
   height: 150px;
@@ -59,7 +73,7 @@
   margin-top:50px;
   z-index: -1;
 }
-@keyframes shine{
+@keyframes shine {
     //shadow box: offsetX offsetY blurSize spread of the light size and colour
   50%{
     box-shadow: 

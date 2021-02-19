@@ -4,6 +4,7 @@ import Element from "./Element";
 import "./table.scss";
 import data from "../elementsData.json";
 import ExpandedSegment from "./ExpandedSegment";
+import conceptImage from '../elementsPictures/1.jpeg';
 
 class TableV2 extends Component {
   state = {
@@ -22,7 +23,10 @@ class TableV2 extends Component {
       <ExpandedSegment atomic_n={chosenElement[0].atomic_number} atomic_s={chosenElement[0].symbol}
         atomic_name={chosenElement[0].name} atomic_w={chosenElement[0].atomic_weight}
         description={chosenElement[0].description}
+        examples={chosenElement[0].examples}
+        picture={conceptImage}
         date={chosenElement[0].discovered_in}
+        discovered_by={chosenElement[0].discovered_by}
       />
     </Fragment>
   }
