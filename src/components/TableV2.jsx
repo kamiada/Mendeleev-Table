@@ -87,7 +87,8 @@ class TableV2 extends Component {
                 })
                 this.checkIsClicked();
               }
-              }  >              <Element
+              }  >              
+              <Element
                   atomicNumb={data[2].atomic_number} symbol={data[2].symbol} name={data[2].name} atomicWeight={data[2].atomic_weight}
                 /></div>
               <div className={isClicked ? "disappear" : "square"} onClick={() => {
@@ -96,7 +97,8 @@ class TableV2 extends Component {
                 })
                 this.checkIsClicked();
               }
-              }  >              <Element
+              }  >              
+              <Element
                   atomicNumb={data[3].atomic_number} symbol={data[3].symbol} name={data[3].name} atomicWeight={data[3].atomic_weight}
                 /></div>
 
