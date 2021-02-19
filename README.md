@@ -8,8 +8,9 @@ At the moment 19/02/2021, the projects works like this
 ![tablica Mendlejewa](periodicTableUpdate.gif)
 
 ### Potential improvements
-- I could add images presenting the elements from the table in nature, in order to make learning about them more easier
+- I could add images presenting the scientists who discovered each element
 - I am not sure if I like the length of the glow in the segment
+- code refactoring. Big time. This project is more of a proof of concept and I like it how it is right now, but I really dislike how the code turned out
 
 ## Used technologies and packages: 
 - React.JS 
