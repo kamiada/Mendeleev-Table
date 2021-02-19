@@ -5,7 +5,7 @@ The purpose of this project is to create a website which could help student to e
 The project is using JSON file with information about each element of the periodic table. When user clicks on one of the elements, the element grows to become a segment which holds stored information. 
 
 At the moment 19/02/2021, the projects works like this
-![tablica Mendlejewa](periodicTable.gif)
+![tablica Mendlejewa](periodicTableUpdate.gif)
 
 ### Potential improvements
 - I could add images presenting the elements from the table in nature, in order to make learning about them more easier

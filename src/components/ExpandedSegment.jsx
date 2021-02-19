@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./expandedSegment.scss";
-import conceptImage from '../elementsPictures/1.jpeg';
 
 class ExpandedSegment extends Component {
   render() {
@@ -21,7 +20,6 @@ class ExpandedSegment extends Component {
           </div>
           <div className="basicBorder">
             <div className="finderDetails">
-              <img src={require(conceptImage)} alt="finder of the element" width="10px" height="10px"/>
               Discovered in {this.props.date} by {this.props.discovered_by}
             </div>
           </div>
